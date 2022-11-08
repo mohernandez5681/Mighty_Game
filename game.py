@@ -11,6 +11,10 @@ while True:
     recent_events = pygame.event.get()
     print("----------done checking for events----------")
     for event in recent_events:
-        print(event)
+        if event.type == pygame.K_r:
+            screen.fill((255,0,0))
+        elif event.type == pygame.K_g:
+            screen.fill((0,255,0))
+
     pygame.display.flip()
     time.sleep(2)
