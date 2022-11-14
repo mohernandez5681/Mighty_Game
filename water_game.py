@@ -38,7 +38,16 @@ screen.blit(bottom_mid,(screen_rect.centerx - 1*tile_size, screen_rect.centery))
 screen.blit(bottom_right,(screen_rect.centerx, screen_rect.centery))
 
 
+my_ship = pygame.image.load('images/blue_ship.png')
+screen.blit(my_ship,(320,320))
 
+while True:
+    recent_events = pygame.event.get()
+    for event in recent_events:
+        if event.type == pygame.MOUSEMOTION:
+            print(event)
+        if event.type == pygame.QUIT:
+            
 
 
 pygame.display.flip()
