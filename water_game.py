@@ -45,10 +45,10 @@ while True:
     recent_events = pygame.event.get()
     for event in recent_events:
         if event.type == pygame.MOUSEMOTION:
-            print(event)
+            coordinate = pygame.mouse.get_pos()
+            screen.blit(my_ship, coordinate)
         if event.type == pygame.QUIT:
-            
-
+            pygame.quit()
+            sys.exit()
 
 pygame.display.flip()
-time.sleep(5)
